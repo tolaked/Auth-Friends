@@ -26,7 +26,10 @@ function Container(props) {
 
       <main>
         <Route exact path="/" component={Login} />
-        <Route path="/" component={props => withAthCheck(Friends, props)} />
+        <Route
+          path="/friends"
+          component={props => withAthCheck(Friends, props)}
+        />
       </main>
     </div>
   );

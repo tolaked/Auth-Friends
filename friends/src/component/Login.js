@@ -5,7 +5,8 @@ export function Login(props) {
   const usernameRef = useRef();
   const passwordRef = useRef();
 
-  const onSubmit = () => {
+  const onSubmit = e => {
+    e.preventDefault();
     axios
       .post("http://localhost:5000/api/login", {
         username: usernameRef.current.value,
