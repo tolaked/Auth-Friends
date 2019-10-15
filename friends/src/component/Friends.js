@@ -1,4 +1,4 @@
-import React, { useState, useffect } from "react";
+import React, { useState, useEffect } from "react";
 import WithAuth from "../axios/index";
 
 function Friends(props) {
@@ -16,13 +16,13 @@ function Friends(props) {
   }, []);
   return (
     <div>
-      {friends.map(friend => {
+      {friends.map(friend => (
         <div>
           <h5>{friend.name}</h5>
           <p>{friend.email}</p>
           <p>{friend.age}</p>
-        </div>;
-      })}
+        </div>
+      ))}
     </div>
   );
 }
